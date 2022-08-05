@@ -1,0 +1,51 @@
+.container {
+  display: grid;
+  height: calc(100vh - 132px);
+  grid-template-columns: auto 30% auto;
+  grid-template-rows: 8% 30% 30% 30%;
+  gap: 50px;
+  grid-template-areas: 
+    "header header header"
+    ". avaliation ."
+    ". consult ."
+    ". diet . ";
+}
+.header {
+  grid-area: header;
+
+  background: var(--white);
+}
+.consultas {
+  grid-area: consult;
+  background: #343965;
+}
+.avaliacoes {
+  grid-area: avaliation;
+  background: #343965;
+}
+.dietas {
+  grid-area: diet;
+  background: #343965;
+}
+.modal {
+  background-color: #343965;
+  border-radius: 5px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  width: 500px;
+  height: 390px;
+  margin: auto;
+  margin-top: 20rem;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+.overlayModal {
+  border: 1px black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // backdrop-filter: blur(10px);
+}

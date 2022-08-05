@@ -1,0 +1,41 @@
+.container {
+  display: grid;
+  height: calc(100vh - 132px);
+  grid-template-columns: auto 30% 30% auto;
+  grid-template-rows: 8% 30% 30% 30%;
+  gap: 50px;
+  grid-template-areas: 
+    "header header header header"
+    ". calendar data ."
+    ". consult avaliation ."
+    ". diet client . ";
+}
+.header {
+  grid-area: header;
+
+  background: var(--white);
+}
+.calendar {
+  grid-area: calendar;
+  background: var(--light-blue);
+}
+.dados {
+  grid-area: data;
+  background: var(--light-blue);
+}
+.consultas {
+  grid-area: consult;
+  background: var(--light-blue);
+}
+.avaliacoes {
+  grid-area: avaliation;
+  background: var(--light-blue);
+}
+.dietas {
+  grid-area: diet;
+  background: var(--light-blue);
+}
+.clientes {
+  grid-area: client;
+  background: var(--light-blue);
+}
