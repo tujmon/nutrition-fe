@@ -2,40 +2,194 @@
   display: grid;
   height: calc(100vh - 132px);
   grid-template-columns: auto 30% 30% auto;
-  grid-template-rows: 8% 30% 30% 30%;
+  grid-template-rows: 8% auto 45% 45%;
   gap: 50px;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header header"
     ". calendar data ."
     ". consult avaliation ."
     ". diet client . ";
 }
+
 .header {
   grid-area: header;
 
-  background: var(--white);
+  background: var(--light-blue);
 }
-.calendar {
+
+.calendarContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
   grid-area: calendar;
-  background: var(--light-blue);
+  color: white;
+  border-radius: 10px;
+  padding-bottom: 20px;
+
+  h1 {
+    padding: 15px;
+  }
 }
-.dados {
+
+.calendar {
+  padding: 10px;
+  align-self: center;
+}
+
+.dadosContainer {
   grid-area: data;
-  background: var(--light-blue);
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  height: 100%;
+  grid-template-columns: 40% 40%;
+  grid-template-rows: 8% 40% 40%;
+  gap: 20px;
+  grid-template-areas:
+    "dados dados"
+    "clientes dietasf"
+    "dietasp Dconsultas";
+
+  h1 {
+    justify-self: start;
+  }
+
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: var(--light-blue);
+
+    h1 {
+      font-size: 16px;
+      padding: 10px;
+    }
+
+    p {
+      color: var(--white);
+      font-size: 64px;
+      font-weight: bold;
+      font-family: 'Inter';
+    }
+  }
+
+  .dadosClientes {
+    grid-area: clientes;
+  }
+
+  .dadosDietasF {
+    grid-area: dietasf;
+  }
+
+  .dadosDietasP {
+    grid-area: dietasp;
+  }
+
+  .dadosConsultas {
+    grid-area: Dconsultas;
+  }
 }
-.consultas {
+
+.consultasContainer {
   grid-area: consult;
   background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+
+  h1 {
+    padding: 15px 0;
+  }
 }
-.avaliacoes {
+
+.consultas {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+
+.avaliacoesContainer {
   grid-area: avaliation;
   background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+
+  h1 {
+    padding: 15px 0;
+  }
 }
-.dietas {
+.avaliacoes {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+
+.dietasContainer {
   grid-area: diet;
   background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+
+  h1 {
+    padding: 15px 0;
+  }
 }
-.clientes {
+.dietas {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+
+.clientesContainer {
   grid-area: client;
   background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+
+  h1 {
+    padding: 15px 0;
+  }
+}
+
+.clientes {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: var(--white);
 }
