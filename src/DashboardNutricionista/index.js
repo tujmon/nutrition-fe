@@ -18,7 +18,6 @@ function DashboardNutricionista() {
         <div className={styles.calendarContainer}>
           <h1>Calendar</h1>
           <Calendar onChange={onChange} value={date} className={`react-calendar ${styles.calendar}`} />
-          {console.log(date)}
         </div>
         <div className={styles.dadosContainer}>
           <h1>Dados</h1>

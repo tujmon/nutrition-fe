@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser } from '@fortawesome/free-solid-svg-icons';
 import styles from './style.module.scss';
 import logoImage from '../assets/img/sysfit.png';
 
@@ -8,7 +6,6 @@ function CadastroNutricionista() {
     <>
       <div className={styles.header}>
         <h1>Cadastro de Nutricionistas</h1>
-        <FontAwesomeIcon icon={faUser} />
       </div>
       <div className={styles.container}>
         <div className={styles.containerLogo}>

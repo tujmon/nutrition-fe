@@ -1,16 +1,12 @@
-import Modal from 'react-modal';
-import React, { useCallback } from 'react';
+import { useState } from 'react';
+
+import Modal from '../components/modal';
 import styles from './style.module.scss';
 
 function DashboardCliente() {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
-
-  const openModal = useCallback((() => {
-    setIsOpen(true);
-  }), [setIsOpen]);
-  const closeModal = useCallback((() => {
-    setIsOpen(false);
-  }), [setIsOpen]);
+  const [isAvaliationOpen, setAvaliationIsOpen] = useState(false);
+  const [isConsultOpen, setConsultIsOpen] = useState(false);
+  const [isDietOpen, setDietIsOpen] = useState(false);
 
   return (
     <div className={styles.flex}>
@@ -20,26 +16,40 @@ function DashboardCliente() {
         </div>
         <div className={styles.avaliacoes}>
           <h1>avaliacoes</h1>
+          <button type="button" onClick={() => setAvaliationIsOpen(true)}>Open Modal</button>
         </div>
         <div className={styles.consultas}>
           <h1>consultas</h1>
+          <button
+            type="button"
+            onClick={() => { setConsultIsOpen(true); }}
+          >
+            Open Modal
+          </button>
         </div>
         <div className={styles.dietas}>
           <h1>dietas</h1>
-          <button type="button" onClick={openModal}>Open Modal</button>
+          <button type="button" onClick={() => setDietIsOpen(true)}>Open Modal</button>
         </div>
       </div>
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        className={styles.modal}
-        contentLabel="Example Modal"
-        overlayClassName={styles.overlayModal}
-      >
-        <h1>Dietas</h1>
-        <button type="button" onClick={closeModal}>close</button>
 
+      {isAvaliationOpen && (
+      <Modal setIsOpen={setAvaliationIsOpen}>
+        <h1>Avaliacao</h1>
       </Modal>
+      )}
+
+      {isConsultOpen && (
+      <Modal setIsOpen={setConsultIsOpen}>
+        <h1>Consulta</h1>
+      </Modal>
+      )}
+
+      {isDietOpen && (
+      <Modal setIsOpen={setDietIsOpen}>
+        <h1>Dietas</h1>
+      </Modal>
+      )}
     </div>
   );
 }

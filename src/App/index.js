@@ -1,9 +1,9 @@
 // import style from './style.module.css';
-import DashboardNutricionista from '../DashboardNutricionista';
+import DashboardCliente from '../DashboardCliente';
 
 function App() {
   return (
-    <DashboardNutricionista />
+    <DashboardCliente />
   );
 }
 
