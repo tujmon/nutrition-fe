@@ -2,6 +2,7 @@ import 'react-calendar/dist/Calendar.css';
 import './calendar.scss';
 import { useState } from 'react';
 import Calendar from 'react-calendar';
+import { BiTrash } from 'react-icons/bi';
 import styles from './style.module.scss';
 
 function DashboardNutricionista() {
@@ -42,18 +43,21 @@ function DashboardNutricionista() {
           <h1>consultas da data</h1>
           <div className={styles.consultas}>
             <p>consulta a</p>
-            {' '}
-            removerIcon
+            <a href="/#">
+              <BiTrash />
+            </a>
           </div>
           <div className={styles.consultas}>
             <p>consulta b</p>
-            {' '}
-            removerIcon
+            <a href="/#">
+              <BiTrash />
+            </a>
           </div>
           <div className={styles.consultas}>
             <p>consulta c</p>
-            {' '}
-            removerIcon
+            <a href="/#">
+              <BiTrash />
+            </a>
           </div>
         </div>
         <div className={styles.avaliacoesContainer}>
@@ -62,7 +66,9 @@ function DashboardNutricionista() {
             <p>avaliacao nome</p>
             <div>
               <a href="/#">status</a>
-              <a href="/#">removerIcon</a>
+              <a href="/#">
+                <BiTrash />
+              </a>
             </div>
           </div>
         </div>
@@ -72,7 +78,9 @@ function DashboardNutricionista() {
             <p>avaliacao nome</p>
             <div>
               <a href="/#">status</a>
-              <a href="/#">removerIcon</a>
+              <a href="/#">
+                <BiTrash />
+              </a>
             </div>
           </div>
         </div>
@@ -82,7 +90,9 @@ function DashboardNutricionista() {
             <p>avaliacao nome</p>
             <div>
               <a href="/#">status</a>
-              <a href="/#">removerIcon</a>
+              <a href="/#">
+                <BiTrash />
+              </a>
             </div>
           </div>
         </div>
