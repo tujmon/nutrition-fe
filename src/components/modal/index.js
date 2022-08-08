@@ -13,7 +13,6 @@ function Modal({ children, setIsOpen }) {
       isOpen
       onRequestClose={closeModal}
       className={styles.modal}
-      ariaHideApp={false}
       contentLabel="Example Modal"
       overlayClassName={styles.overlayModal}
     >

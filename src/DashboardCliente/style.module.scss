@@ -2,7 +2,7 @@
   display: grid;
   height: calc(100vh - 132px);
   grid-template-columns: auto 30% auto;
-  grid-template-rows: 8% 30% 30% 30%;
+  grid-template-rows: 8% 40% 40% 40%;
   gap: 50px;
   grid-template-areas: 
     "header header header"
@@ -12,18 +12,119 @@
 }
 .header {
   grid-area: header;
-
-  background: var(--white);
+  position: sticky;
+  top: 0;
+  position: -webkit-sticky;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--light-blue);
+  h1 {
+    margin-left: 50px;
+    font-size: 24px;
+    color: var(--white);
+  }
+  a {
+    color: var(--dark-blue);
+    font-size: 30px;
+    margin-right: 50px;
+  }
+}
+.consultasContainer {
+  grid-area: consult;
+  background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+  overflow-y: scroll;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
 }
 .consultas {
-  grid-area: consult;
-  background: #343965;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+}
+.avaliacoesContainer {
+  grid-area: avaliation;
+  background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
 }
 .avaliacoes {
-  grid-area: avaliation;
-  background: #343965;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+  div {
+    display: flex;
+    gap: 5px;
+  }
 }
-.dietas {
+.dietasContainer {
   grid-area: diet;
-  background: #343965;
+  background: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  gap: 10px;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 0px;
+  }
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.dietas {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  background-color: var(--white);
+  border-radius: 5px;
+  width: 80%;
+  padding: 20px;
+  div {
+    display: flex;
+    gap: 5px;
+  }
+}
+.title {
+  margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  h1 {
+    padding: 15px 0;
+    font-size: 24px;
+    color: var(--white);
+  }
+}
+.buttonLink {
+  color: var(--light-blue);
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
 }

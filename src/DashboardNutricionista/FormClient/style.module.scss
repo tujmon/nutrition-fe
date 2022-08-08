@@ -1,0 +1,61 @@
+.formDiet {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.client {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 0;
+  padding: 15px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.meal {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 0;
+  padding: 15px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.mealLink {
+  color: var(--white);
+  border: 0;
+  background: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buttonSubmit {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  border: 0;
+  border-radius: 5px;
+  margin: 5px;
+  transition-duration: 0.4s;
+  font-weight: bold;
+  height: 50px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--dark-blue);
+  }
+}
+
+
+.inputField {
+  padding: 10px 5px;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 0;
+  border-radius: 5px;
+
+  &::placeholder {
+    color: ccc;
+  }
+}
