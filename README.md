@@ -1,6 +1,9 @@
-# Requisitos
-- npm
-# Como rodar
-podemos utilizar o seguinte comando
-- npm install
-- npm start
+
+## Front-end
+### Condições:
+- Ter o node instalado
+- Ter o back-end rodando
+
+### Rodar os seguintes comandos:
+    npm install
+    npm start
